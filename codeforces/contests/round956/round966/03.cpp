@@ -1,49 +1,52 @@
 #include<iostream>
-using namespace std;
 #include<vector>
-#include<map>
-bool solv(string str,vector<int>v,int n){
-    map<char ,int>m;
-    if(str.length()!=n){
-        return false;
+#include<unordered_map>
+using namespace std;
+using ll = long long;
+
+bool solv(const string& str, const vector<ll>& v, ll n) {
+    if (str.length() != n) return false;
+
+    unordered_map<char, ll> charToInt;
+    unordered_map<ll, char> intToChar;
+    
+    for (ll i = 0; i < n; i++) {
+        char c = str[i];
+        ll num = v[i];
+
+        if (charToInt.count(c) && charToInt[c] != num) return false;
+        if (intToChar.count(num) && intToChar[num] != c) return false;
+
+        charToInt[c] = num;
+        intToChar[num] = c;
     }
-    for(int i = 0;i<str.length();i++){
-        if(m.find(str[i])==m.end()){
-            m[str[i]] = v[i];
-        }
-        else {
-            if(m[str[i]] != 
-            
-            v[i]) return false;
-        }
-    }
+
     return true;
 }
-int main(){
- int t;
- cin>>t;
- while(t--){
-    int n;
-    cin>>n;
-    vector<int>num(n);
-    for(int i = 0;i<n;i++){
-        cin>>num[i];
-    }
-     int m;
-     cin>>m;
-     vector<string>str;
-     for(int i = 0;i<m;i++){
-         string s;
-         cin>>s;
-         str.push_back(s);
-     }
-     for(int i = 0;i<str.size();i++){
-        bool ans = solv(str[i],num,n);
-        if(ans == true){
-            cout<<"YES"<<endl;
-        }else{
-            cout<<"NO"<<endl;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    ll t;
+    cin >> t;
+    while (t--) {
+        ll n;
+        cin >> n;
+        vector<ll> num(n);
+        for (ll i = 0; i < n; i++) cin >> num[i];
+
+        ll m;
+        cin >> m;
+        vector<string> str(m);
+        for (ll i = 0; i < m; i++) cin >> str[i];
+
+        for (const auto& s : str) {
+            bool ans = solv(s, num, n);
+            cout << (ans ? "YES" : "NO") << endl;
         }
-     }
- }
+    }
+
+    return 0;
 }
