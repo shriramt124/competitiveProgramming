@@ -13,14 +13,12 @@ int lisRecusion(int i, vector<int> arr,vector<int>&dp)
     for (int j = 0; j < i; j++)
     {
         if (arr[i] > arr[j])
-        {
            
             ans = max(ans, lisRecusion(j,arr,dp) + 1);
         }
-    }
+    
     return dp[i] = ans;
 }
-
 //using Dynamic programming approach 
 
 int main()

@@ -3,6 +3,9 @@ using namespace std;
 int Etf(long long a,long long b,long long m){
     long long ans = 1;
 
+    
+
+
 }
 int main(int argc, char const *argv[])
 {
