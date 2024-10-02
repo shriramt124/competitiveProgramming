@@ -68,6 +68,8 @@
         "scoped_allocator": "cpp",
         "shared_mutex": "cpp",
         "thread": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "stack": "cpp",
+        "queue": "cpp"
     }
 }
