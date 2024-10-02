@@ -1,14 +1,7 @@
 {
     "files.associations": {
         "*.ejs": "html",
-        "iostream": "cpp",
-        "new": "cpp",
-        "deque": "cpp",
-        "list": "cpp",
-        "string": "cpp",
         "vector": "cpp",
-        "forward_list": "cpp",
-        "ostream": "cpp",
         "*.tcc": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
@@ -28,9 +21,12 @@
         "fstream": "cpp",
         "iomanip": "cpp",
         "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "memory": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
@@ -46,6 +42,9 @@
         "condition_variable": "cpp",
         "cstdint": "cpp",
         "cuchar": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "algorithm": "cpp",
@@ -58,6 +57,7 @@
         "ratio": "cpp",
         "regex": "cpp",
         "set": "cpp",
+        "string": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
@@ -68,8 +68,6 @@
         "scoped_allocator": "cpp",
         "shared_mutex": "cpp",
         "thread": "cpp",
-        "typeindex": "cpp",
-        "climits": "cpp",
-        "queue": "cpp"
+        "typeindex": "cpp"
     }
 }
