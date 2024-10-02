@@ -2,6 +2,11 @@
 using namespace std;
 #include<vector>
 const int MOD = 1e9+7;
+
+
+/* 
+https://codeforces.com/problemset/problem/474/D
+ */
 #define int long long
 vector<int>dp(100013,-1);
 //dp[i] --> no of ways she can eat i flowers
