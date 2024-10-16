@@ -36,3 +36,12 @@ using namespace std;
 
 #define endl '\n'
 const int MOD = 1e9+7;
+
+int main( )
+{
+    vector<int>arr;
+    arr.push_back(1);
+    arr.pop_back();
+    cout<<arr.size()<<endl;
+    return 0;
+}
