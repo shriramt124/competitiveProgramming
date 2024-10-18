@@ -8,3 +8,17 @@ https://codeforces.com/problemset/problem/1869/A
 
 
 
+## concept 2
+
+Yes, in an array of length 
+𝑛
+n, the maximum bitwise OR you can obtain by applying the OR operator to any subset of the array elements is equal to the OR of all the elements of the array.
+
+Why is this true?
+Bitwise OR sets each bit to 1 if any of the bits in the corresponding position of the operands is 1.
+
+When you OR all the elements of the array together, you include every bit that is set to 1 across all elements of the array. Therefore, the result will have all the bits set that could possibly be set by OR'ing any subset of the array.
+
+OR'ing fewer than all elements will only consider some of the bits (those present in the selected subset), so it can never produce more 1-bits than OR'ing all the elements together.
+
+Thus, the OR of all elements in the array is the largest possible value you can obtain using the bitwise OR operation on any subset of the array.
