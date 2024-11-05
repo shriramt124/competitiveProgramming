@@ -1,47 +1,28 @@
-#include<bits/stdc++.h>
+#include <cstdio>
 using namespace std;
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-        int n;
-        cin>>n;
-        string str;
-        cin>>str;
-        if(n == 1){
-            if(str[0] == '?'){
-                cout<<'B'<<endl;
-
-            }else{
-                cout<<str<<endl;
-            }
-            continue;
-        }
-        int startCount = 0;
-        int start = 0;
-        while(start<n && str[start++] == '?' ) startCount++;
-        if(startCount%2 == 0){
-          for(int i = 0;i<start;i++){
-            if(i%2 == 0) str[i] = 'R';
-            else str[i] = 'B';
-          }
-          
-        }else{
-               for(int i = 0;i<start;i++){
-            if(i%2 == 0) str[i] = 'B';
-            else str[i] = 'R';
-               }
-        }
-         for(int i = 0;i<n;i++){
-            if(str[i] == 'B' && str[i+1] == '?'){
-                str[i+1] = 'R';
-            }
-            if(str[i] == 'R' && str[i+1] == '?'){
-                str[i+1] = 'B';
-            }
-          }
-        cout<<str<<endl;
-        
-        
-    }
+/* https://codeforces.com/contest/1559/problem/B */
+const int N=105;
+int t,n,cnt;
+char s[N];
+int main()
+{
+	scanf("%d",&t);
+	while (t--)
+	{
+		cnt=0;
+		scanf("%d",&n);
+		scanf("%s",s+1);
+		for (int i=1;i<=n;i++)
+			cnt+=(s[i]!='?');
+		if (!cnt)
+			s[1]='R';
+		for (int i=2;i<=n;i++)
+			if (s[i]=='?'&&s[i-1]!='?')
+				s[i]=s[i-1]^('B'^'R');
+		for (int i=n-1;i;i--)
+			if (s[i]=='?'&&s[i+1]!='?')
+				s[i]=s[i+1]^('B'^'R');
+		printf("%s\n",s+1);
+	}
+	return 0;
 }
