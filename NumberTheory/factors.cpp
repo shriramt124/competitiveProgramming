@@ -19,7 +19,7 @@ void factorsOptimize(int n){
         cout<<i<<" "<<n/i<<" ";
         countOfFactors+=1;
         sumOfFactors+=i;
-        if(n/i != i){
+        if(n/i != i){//in case of perfect squares we will have one common factor
         countOfFactors+=1;
         sumOfFactors+=n/i;
         }
