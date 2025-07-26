@@ -15,7 +15,7 @@ void dijkstra(unordered_map<int,list<pair<int,int>>>&graph,int src){
     dist[src] = 0;
 
    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>>pq;
-   //it represents the node ,distance
+   //it represents the distance ,node
    pq.push({0,src});
    while(not pq.empty()){
      pair<int,int>p = pq.top();
